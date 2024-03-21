@@ -16,7 +16,7 @@ const Footer = () => {
             position={'absolute'}
             bottom={'0'}
             padding={'20px 80px'}
-            backgroundColor={COLORS.SECUNDARY}
+            backgroundColor={COLORS.SECONDARY}
             justifyContent={'space-between'}
             alignItems={'center'}
         >

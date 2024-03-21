@@ -7,8 +7,14 @@ import Layout from '../layouts/Layout';
 const AppRoutes = () => {
     const router = createBrowserRouter([
         {
-            path: '/',
-            element: <Layout />
+            path: "/",
+            element: <Layout />,
+            children: [
+                {
+                    path: "/",
+                    element: <div>Home</div>
+                }
+            ]
         }
     ])
 
