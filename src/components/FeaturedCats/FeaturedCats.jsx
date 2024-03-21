@@ -1,12 +1,12 @@
 import { Flex } from '@chakra-ui/react';
 import Title from '../Title/Title';
 import { useEffect, useState } from 'react';
-import RestaurantsGrid from '../RestaurantsGrid/RestaurantsGrid';
+import CatsGrid from '../CatsGrid/CatsGrid';
 import RestaurantJson from '../../mockRestaurants.json'
 
 
-const FeaturedRestaurants = () => {
-  const [restaurants, setRestaurants] = useState(RestaurantJson.slice(0, 6));
+const FeaturedCats = () => {
+  const [cats, setCats] = useState(RestaurantJson.slice(0, 6));
 
   /*   const getSixRestaurants = async () => {
       try {
@@ -26,10 +26,10 @@ const FeaturedRestaurants = () => {
    */
   return (
     <Flex width={'100%'} gap={'80px'} flexDir={'column'}>
-      <Title>Featured Restaurants:</Title>
-      <RestaurantsGrid restaurants={restaurants} />
+      <Title>Featured Cats:</Title>
+      <CatsGrid cats={cats} />
     </Flex>
   );
 };
 
-export default FeaturedRestaurants;
+export default FeaturedCats;

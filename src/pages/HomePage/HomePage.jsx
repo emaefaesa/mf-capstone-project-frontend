@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/layout'
 import PageWrapper from '../../components/PageWrapper/PageWrapper'
 import React from 'react'
-import FeaturedRestaurants from '../../components/FeaturedRestaurants/FeaturedRestaurants'
+import FeaturedCats from '../../components/FeaturedCats/FeaturedCats'
 
 
 function HomePage() {
@@ -9,7 +9,7 @@ function HomePage() {
         <PageWrapper>
             <Flex>
 
-                <FeaturedRestaurants></FeaturedRestaurants>
+                <FeaturedCats></FeaturedCats>
             </Flex>
         </PageWrapper>
     )
