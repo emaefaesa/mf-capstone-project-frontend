@@ -8,7 +8,6 @@ function HomePage() {
     return (
         <PageWrapper>
             <Flex>
-
                 <FeaturedCats></FeaturedCats>
             </Flex>
         </PageWrapper>

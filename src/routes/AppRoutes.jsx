@@ -4,6 +4,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Layout from '../layouts/Layout';
 import HomePage from '../pages/HomePage/HomePage';
+import CatsPage from '../pages/CatsPage/CatsPage';
+import LoaderCatsPage from '../pages/CatsPage/LoaderCatsPage';
 
 const AppRoutes = () => {
     const router = createBrowserRouter([
@@ -14,10 +16,11 @@ const AppRoutes = () => {
                 {
                     path: "/",
                     element: <HomePage />
-                }
+                },
                 {
-                    path: '/cats',
-                    element: <div></div>
+                    path: "/cats",
+                    element: <CatsPage />,
+                    loader: <LoaderCatsPage />
                 }
             ]
         },
