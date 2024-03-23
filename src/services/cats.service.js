@@ -6,7 +6,7 @@ class CatsService extends AxiosConfig {
     }
 
     async getAllCats() {
-        const response = await this.axios.get('list')
+        const response = await this.axios.get('/list');
         return response.data;
     }
 }

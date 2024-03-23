@@ -18,7 +18,7 @@ const CatsGrid = ({ cats }) => {
       ]}
       gap={"40px"}
     >
-      {cats.map(({ name, _id, image }) => {
+      {cats.map(({ name, _id, image, }) => {
         return (
           <CustomLink key={_id} to={`/cats/${_id}`}>
             <CatsCard
