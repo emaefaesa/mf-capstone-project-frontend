@@ -15,8 +15,17 @@ const AppRoutes = () => {
                     path: "/",
                     element: <HomePage />
                 }
+                {
+                    path: '/cats',
+                    element: <div></div>
+                }
             ]
+        },
+        {
+            path: '/home',
+            element: <HomePage />
         }
+
     ])
 
     return <RouterProvider router={router}></RouterProvider>
