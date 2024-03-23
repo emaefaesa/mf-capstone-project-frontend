@@ -11,8 +11,8 @@ function CatsPage() {
     const cats = useLoaderData();
 
     return (
-        <PageWrapper flexDir={"column"} gap={"80px"}>
-            <Flex>
+        <PageWrapper>
+            <Flex flexDir={"column"} gap={"80px"}>
                 <Title>Kitties!</Title>
                 <FeaturedCats cats={cats}></FeaturedCats>
                 <CatsGrid />
