@@ -22,8 +22,11 @@ const Navbar = () => {
             alignItems={'center'}
         >
             <CustomLink to='/'>
+
                 <Text fontSize={'36px'} fontWeight={'700'}>
-                    Rapaws
+                    <span class="material-symbols-outlined">
+                        pets
+                    </span> Rapaws
                 </Text>
             </CustomLink>
 

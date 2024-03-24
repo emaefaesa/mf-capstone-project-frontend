@@ -20,7 +20,7 @@ const AppRoutes = () => {
                 {
                     path: "/cats",
                     element: <CatsPage />,
-                    loader: <LoaderCatsPage />
+                    loader: LoaderCatsPage
                 }
             ]
         },
