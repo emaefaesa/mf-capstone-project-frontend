@@ -14,8 +14,7 @@ function CatsPage() {
         <PageWrapper>
             <Flex flexDir={"column"} gap={"80px"}>
                 <Title>Kitties!</Title>
-                <FeaturedCats cats={cats}></FeaturedCats>
-                <CatsGrid />
+                <CatsGrid cats={cats} />
             </Flex>
         </PageWrapper>
     )

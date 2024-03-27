@@ -2,13 +2,12 @@ import { Flex } from '@chakra-ui/react';
 import Title from '../Title/Title';
 import { useEffect, useState } from 'react';
 import CatsGrid from '../CatsGrid/CatsGrid';
-import CatJson from '../../cats.json'
+import CatJson from "../../cats.json"
 import catsService from '../../services/cats.service';
 
 
 const FeaturedCats = () => {
-  const [cats, setCats] = useState([CatJson.slice(0, 6)]);
-
+  const [cats, setCats] = useState([])
 
   const getSixCats = async () => {
     try {
@@ -25,6 +24,7 @@ const FeaturedCats = () => {
   useEffect(() => {
     getSixCats();
   }, []);
+
 
   return (
     <Flex width={'100%'} gap={'80px'} flexDir={'column'}>

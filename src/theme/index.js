@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/react"
 
 export const COLORS = {
-    SECONDARY: "#FFF9C7",
+    SECONDARY: "#232323",
 }
 
 export const theme = extendTheme({

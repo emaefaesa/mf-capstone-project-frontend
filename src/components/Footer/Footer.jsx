@@ -2,12 +2,13 @@ import { Flex } from "@chakra-ui/layout"
 import CustomLink from "../CustomLink/CustomLink"
 import InstagramIcon from "../InstagramIcon/InstagramIcon"
 import { COLORS } from "../../theme"
+import MfIcon from "../MfIcon/MfIcon";
 
 const Footer = () => {
 
     const ICONS = [
         { component: <InstagramIcon />, link: '#', id: 1 },
-        { component: <InstagramIcon />, link: '#', id: 2 },
+        { component: <MfIcon />, link: '#', id: 2 },
     ];
 
     return (

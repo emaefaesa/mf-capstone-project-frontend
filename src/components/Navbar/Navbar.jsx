@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Text fontSize={'36px'} fontWeight={'700'}>
                     <span class="material-symbols-outlined">
                         pets
-                    </span> Rapaws
+                    </span> Cadds
                 </Text>
             </CustomLink>
 
