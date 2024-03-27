@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout';
 import HomePage from '../pages/HomePage/HomePage';
 import CatsPage from '../pages/CatsPage/CatsPage';
 import LoaderCatsPage from '../pages/CatsPage/LoaderCatsPage';
+import CreateCatPage from '../pages/CreateCatPage/CreateCatPage';
 
 const AppRoutes = () => {
     const router = createBrowserRouter([
@@ -24,7 +25,7 @@ const AppRoutes = () => {
                 },
                 {
                     path: "/cats/create",
-                    element: <div>ei</div>,
+                    element: <CreateCatPage />,
                 },
             ]
         },
