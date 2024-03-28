@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import { Flex, Text } from "@chakra-ui/layout"
+import SubmitButton from "../../components/SubmitButton/SubmitButton"
+import Input from "../../components/Input/Input"
+import catsService from "../../services/cats.service"
 import FormPageLayout from '../../components/FormPageLayout/FormPageLayout'
 import CustomForm from '../../components/CustomForm/CustomForm'
 
@@ -13,15 +17,18 @@ function CreateCatPage() {
         image: '',
     });
 
-    const tittle = 'Create';
+    const title = 'Create';
     const subtitle = 'Upload your cat!';
 
     const onSubmit = () => { };
-    const onChange = () => { };
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setCatData({ ...catData, [name]: value });
+    };
 
     return (
         <FormPageLayout backgroundImage={IMAGE}>
-            <Flex {...props} minW={"400px"} maxW={"400px"} flexDir={"column"}>
+            <Flex minW={"400px"} maxW={"400px"} flexDir={"column"}>
                 <Text textAlign={"center"} fontSize={"48px"} fontWeight={"bold"}>
                     {title}
                 </Text>
