@@ -9,6 +9,16 @@ class CatsService extends AxiosConfig {
         const response = await this.axios.get('/list');
         return response.data;
     }
+
+    async createCat(data) {
+        data.location = {
+            type: 'Point',
+            coordinates: [12, -43]
+        }
+
+        const response = await this.axios.post('/create', data);
+        return response.data;
+    }
 }
 
 export default new CatsService();

@@ -20,10 +20,27 @@ function CreateCatPage() {
     const title = 'Create';
     const subtitle = 'Upload your cat!';
 
-    const onSubmit = () => { };
+
     const onChange = (e) => {
         const { name, value } = e.target;
         setCatData({ ...catData, [name]: value });
+    };
+
+
+    const onSubmit = async (e) => {
+        try {
+            e.preventDefault();
+            await catsService.createCat(catData);
+            setCatData({
+                name: '',
+                location: '',
+                image: '',
+            })
+        } catch (err) {
+            console.error(err);
+        }
+
+
     };
 
     return (
@@ -47,6 +64,7 @@ function CreateCatPage() {
                                     onChange={onChange}
                                     key={option}
                                     placeholder={/* capitalizeText */(option)} // CAPITALIZED!!! "name" => "Name"
+                                    value={catData[option]}
                                 />
                             )
                         })}
