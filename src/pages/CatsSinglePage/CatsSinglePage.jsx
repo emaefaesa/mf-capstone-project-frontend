@@ -4,6 +4,7 @@ import catsService from '../../services/cats.service'
 import FormPageLayout from '../../components/FormPageLayout/FormPageLayout'
 import { Flex } from '@chakra-ui/layout'
 import { Text } from '@chakra-ui/layout'
+import CatsDetails from '../../components/CatsDetails/CatsDetails'
 
 const CatsSinglePage = () => {
 
@@ -16,7 +17,7 @@ const CatsSinglePage = () => {
 
     const CAT_DETAILS = [
         { name: "Name", content: cat.name },
-        { name: "Location", content: cat.location.coordinates },
+        { name: "Location", content: cat.location.coordinates.join("") },
         { name: "Image", content: cat.image },
     ]
 
@@ -38,18 +39,10 @@ const CatsSinglePage = () => {
     return (
 
         <FormPageLayout backgroundImage={cat.image}>
-            {CAT_DETAILS.map(({ name, content }) => {
-                return (
-                    <Flex>
-                        <Text fontWeight={"bold"}>{name}:</Text>
-                        <Text as={"span"}>{content}</Text>
-                    </Flex>
-                )
-            })}
+            <CatsDetails catsDetails={CAT_DETAILS} />
         </FormPageLayout>
 
     )
-
 
 }
 
