@@ -2,8 +2,8 @@ import { Flex, Text } from "@chakra-ui/react"
 import React from "react"
 import Input from "../Input/Input"
 import SubmitButton from "../SubmitButton/SubmitButton"
-/* import { capitalizeText } from "../../utils"
- */
+import { capitalizeText } from "../../utils"
+
 const CustomForm = ({
     title,
     subtitle,
@@ -31,7 +31,7 @@ const CustomForm = ({
                                 name={option}
                                 onChange={onChange}
                                 key={option}
-                                placeholder={/* capitalizeText */(option)} // CAPITALIZED!!! "name" => "Name"
+                                placeholder={capitalizeText(option)} // CAPITALIZED!!! "name" => "Name"
                             />
                         )
                     })}

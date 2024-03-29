@@ -10,6 +10,13 @@ class CatsService extends AxiosConfig {
         return response.data;
     }
 
+    async getOneCat(id) {
+        const response = await this.axios.get(`/getOne/${id}`);
+        return response.data;
+    }
+
+
+
     async createCat(data) {
         data.location = {
             type: 'Point',
