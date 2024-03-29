@@ -17,7 +17,7 @@ function CreateCatPage() {
         image: '',
     });
 
-    const title = 'Create';
+    const title = 'Create 😺';
     const subtitle = 'Upload your cat!';
 
 

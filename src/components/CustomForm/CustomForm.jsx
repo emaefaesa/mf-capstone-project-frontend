@@ -13,7 +13,7 @@ const CustomForm = ({
     ...props
 }) => {
     return (
-        <Flex minW={"400px"} maxW={"400px"} flexDir={"column"}>
+        <Flex {...props} minW={"400px"} maxW={"400px"} flexDir={"column"}>
             <Text textAlign={"center"} fontSize={"48px"} fontWeight={"bold"}>
                 {title}
             </Text>
