@@ -26,6 +26,12 @@ class CatsService extends AxiosConfig {
         const response = await this.axios.post('/create', data);
         return response.data;
     }
+
+
+    async editCat(id, data) {
+        const response = await this.axios.put(`/edit/${id}`, data)
+        return response.data
+    }
 }
 
 export default new CatsService();

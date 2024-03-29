@@ -4,6 +4,11 @@ import EditIcon from '../EditIcon/EditIcon'
 import { Box } from '@chakra-ui/react'
 
 const CatsDetails = ({ onOpen, catsDetails }) => {
+
+    const handleEdit = () => {
+        console.log("edito")
+    }
+
     return (
         <Flex position={"relative"} marginBottom={"80px"} w={"50%"} justify={"center"}>
             <Flex
@@ -24,9 +29,7 @@ const CatsDetails = ({ onOpen, catsDetails }) => {
                         </Text>
                     )
                 })}
-                <Box position={"absolute"} top={"25px"} right={"25px"} cursor={"pointer"}>
-                    <EditIcon />
-                </Box>
+                <EditIcon onClick={onOpen} />
             </Flex>
         </Flex>
     )
