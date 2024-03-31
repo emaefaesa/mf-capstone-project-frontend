@@ -1,7 +1,7 @@
 import { Text } from "@chakra-ui/react"
 import React from "react"
 
-const Title = ({ children, ...props }) => {
+const Title = ({ fontSize = "56px", children, ...props }) => {
   return (
     <Text
       textAlign={"center"}

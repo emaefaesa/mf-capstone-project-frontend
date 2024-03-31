@@ -2,7 +2,7 @@ import AxiosConfig from "./axios"
 
 class CatsService extends AxiosConfig {
     constructor() {
-        super('cats')
+        super("cats")
     }
 
     async getAllCats() {
@@ -19,7 +19,7 @@ class CatsService extends AxiosConfig {
 
     async createCat(data) {
         data.location = {
-            type: 'Point',
+            type: "Point",
             coordinates: [12, -43]
         }
 
@@ -29,9 +29,11 @@ class CatsService extends AxiosConfig {
 
 
     async editCat(id, data) {
-        const response = await this.axios.put(`/edit/${id}`, data)
-        return response.data
+        const response = await this.axios.put(`/edit/${id}`, data);
+        return response.data;
     }
 }
+
+
 
 export default new CatsService();

@@ -4,11 +4,14 @@ import { Flex } from '@chakra-ui/react'
 import CustomLink from '../CustomLink/CustomLink';
 import AuthLink from '../AuthLink/AuthLink';
 import { useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Navbar = () => {
 
-    const NAVIGATION_LINK = [
-        { link: '/', text: 'Home' },
+/*     const { user, logout } = useContext(AuthContext)
+ */    const NAVIGATION_LINK = [
+        /*  { link: '/', text: 'Home' }, */
         { link: '/cats', text: 'Cats' },
         { link: '/cats/create', text: 'Create' }
     ];
@@ -37,7 +40,7 @@ const Navbar = () => {
 
                     return (
                         <CustomLink to={link} key={text} fontWeight={isActiveLink ? 'bold' : 'normal'} textDecoration={isActiveLink ? 'underline' : 'none'}>
-                            <Text>{text}</Text>
+                            <Text fontSize={"25px"}>{text}</Text>
                         </CustomLink>
                     )
                 })}
@@ -46,6 +49,8 @@ const Navbar = () => {
 
             {/* LOGIN */}
             <Flex gap={'20px'}>
+
+
                 <AuthLink to={'/login'}>Login</AuthLink>
                 <AuthLink to={'/signup'}>Signup</AuthLink>
             </Flex>
