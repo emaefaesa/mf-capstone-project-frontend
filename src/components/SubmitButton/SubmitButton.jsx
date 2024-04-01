@@ -5,7 +5,7 @@ const SubmitButton = () => {
     return (
         <ChakraButton
             _hover={{
-                backgroundColor: "brown",
+                backgroundColor: "blue",
             }}
             minH={"56px"}
             width={"100%"}

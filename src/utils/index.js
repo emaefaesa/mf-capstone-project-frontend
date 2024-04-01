@@ -5,3 +5,15 @@ export const capitalizeText = (text) => {
     const capitalizedFirstLetter = parsedText[0].toUpperCase()
     return `${capitalizedFirstLetter}${parsedText.slice(1)}`
 }
+
+export const getCatDetails = (
+    name,
+    location,
+    image
+) => {
+    return [
+        { name: "Name", content: name },
+        { name: "Location: ", content: location.coordinates.join(" ") },
+        { name: "Image: ", content: image },
+    ]
+}

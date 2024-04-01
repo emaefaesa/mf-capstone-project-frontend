@@ -36,4 +36,3 @@ You will need to create a .env (or .env.local) file if you want to run this proj
 |            /cats                    |     Cats Page             |    ✅     |
 |          /cats/:id                  |  Cats Details Page        |    ✅     |
 |         /cats/create                | Cats Creation Page        |    ✅     |
-| /cats/reviews/:restaurant_id        |     Cats Page             |    ✅     |

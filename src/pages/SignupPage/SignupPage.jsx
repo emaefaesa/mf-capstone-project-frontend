@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import FormPageLayout from "../../components/FormPageLayout/FormPageLayout"
-import CustomForm from "../../components/CustomForm/CustomForm"
-import authService from "../../services/auth.service"
-import { useToast } from "@chakra-ui/react"
-import { useNavigate } from "react-router-dom"
+import CustomForm from "../../components/CustomForm/CustomForm";
+import { useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import authService from "../../services/auth.services";
 
 const SignupPage = () => {
     const [userData, setUserData] = useState({

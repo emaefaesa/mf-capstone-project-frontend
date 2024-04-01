@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react"
-import authService from "../services/auth.service"
 import { useNavigate } from "react-router-dom"
+import authService from "../services/auth.services"
+
 
 export const AuthContext = createContext()
 
@@ -32,23 +33,14 @@ export const AuthProvider = ({ children }) => {
 
     const logout = (e) => {
         if (e) e.preventDefault()
-        // REMOVEMOS EL TOKEN
-        // SETEAMOS EL USUARIO A NULL
-        // REDIRECCIÓN AL LOGIN!!!
-        console.log("ENTRO AL LOGOUT!!!")
+        console.log("LOGOUT")
         localStorage.removeItem("token")
         setUser(null)
         navigate("/login")
     }
 
     const login = async (userData) => {
-        // LLAMADA ==> LOGIN ----
-        // token... => INFORMACIÓN DEL USUARIO!!! ----
-        // GUARDAMOS EL TOKEN ----
-        // RECOGEMOS AL USUARIO CON EL TOKEN
-        // GUARDAMOS AL USUARIO EN EL ESTADO DE USER
-        // REDIRECCIÓN A NUESTRO PERFIL...
-        // Y SI LOS DATOS NO SON CORRECTOS...
+
         try {
             const { token } = await authService.login(userData)
             setToken(token)
