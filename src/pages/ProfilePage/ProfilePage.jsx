@@ -8,6 +8,11 @@ import { AuthContext } from "../../contexts/AuthContext"
 
 const ProfilePage = () => {
     const { user } = useContext(AuthContext)
+
+    if (!user) {
+        return <div>Loading...</div>;
+    }
+
     const { username, email, avatar, favoriteCats } = user
 
     const handleUserEdit = () => { }
@@ -24,9 +29,9 @@ const ProfilePage = () => {
                     handleUserDeletion={handleUserDeletion}
                     handleUserEdit={handleUserEdit}
                 />
-                {favoriteCats.length !== 0 && (
+                {/* {favoriteCats.length !== 0 && (
                     <FavoriteCats favoriteCats={favoriteCats} />
-                )}
+                )} */}
             </Flex>
         </PageWrapper>
     )

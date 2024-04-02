@@ -9,9 +9,9 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 const Navbar = () => {
 
-/*     const { user, logout } = useContext(AuthContext)
- */    const NAVIGATION_LINK = [
-        /*  { link: '/', text: 'Home' }, */
+    const { user, logout } = useContext(AuthContext)
+    const NAVIGATION_LINK = [
+        { link: '/', text: 'Home' },
         { link: '/cats', text: 'Cats' },
         { link: '/cats/create', text: 'Create' }
     ];
@@ -48,11 +48,18 @@ const Navbar = () => {
 
 
             {/* LOGIN */}
-            <Flex gap={'20px'}>
-
-
-                <AuthLink to={'/login'}>Login</AuthLink>
-                <AuthLink to={'/signup'}>Signup</AuthLink>
+            <Flex gap={"20px"}>
+                {user ? (
+                    <>
+                        <AuthLink to={"/profile"}>Profile</AuthLink>
+                        <AuthLink onClick={logout}>Logout</AuthLink>
+                    </>
+                ) : (
+                    <>
+                        <AuthLink to={"/login"}>Login</AuthLink>
+                        <AuthLink to={"/signup"}>Signup</AuthLink>
+                    </>
+                )}
             </Flex>
         </Flex>
     );
