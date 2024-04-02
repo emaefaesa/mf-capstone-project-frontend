@@ -34,7 +34,7 @@ const SignupPage = () => {
             })
             navigate("/login")
         } catch (error) {
-            console.log("Error ==>", error)
+            console.log(error)
         }
     }
 

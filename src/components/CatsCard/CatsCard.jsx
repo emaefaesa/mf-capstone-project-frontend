@@ -1,39 +1,42 @@
+import React, { useState } from "react"
 import { Flex, GridItem, Text } from "@chakra-ui/react"
-import React from "react"
 // import LikeIcon from "../LikeIcon/LikeIcon"
 
 const CatsCard = ({ image, name, handleLike }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <GridItem
       cursor={"pointer"}
-      borderRadius={"30px"}
+      borderRadius={"10px"}
       w={"100%"}
       h={["400px", "500px", "550px"]}
       backgroundImage={image}
       backgroundPosition={"center"}
       backgroundSize={"cover"}
       position={"relative"}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      boxShadow={"0px 4px 8px rgba(0, 0, 0, 0.1)"}
     >
       {/* <LikeIcon handleLike={handleLike} /> */}
-      <Flex
-        width={"100%"}
-        position="absolute"
-        bottom="45px"
-        justify={"center"}
-        alignItems={"center"}
-      >
+      {isHovered && (
         <Flex
+          width={"100%"}
+          height={"100%"}
+          position="absolute"
+          top="0"
+          left="0"
           justify={"center"}
           alignItems={"center"}
-          padding={"22px 56px"}
-          backgroundColor={"white"}
-          borderRadius={"30px"}
+          backgroundColor={"rgba(69, 234, 225, 0.2)"}
+          borderRadius={"10px"}
         >
-          <Text fontSize={"20px"} fontWeight={"bold"}>
+          <Text fontSize={"45px"} color={'white'} fontWeight={"bold"} fontFamily={'Poppins, sans-serif'} textAlign={"center"}>
             {name}
           </Text>
         </Flex>
-      </Flex>
+      )}
     </GridItem>
   )
 }

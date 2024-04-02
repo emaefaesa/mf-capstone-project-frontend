@@ -27,6 +27,7 @@ const FeaturedCats = () => {
 
 
   return (
+
     <Flex width={'100%'} gap={'80px'} flexDir={'column'}>
       <Title>Featured Cats:</Title>
       <CatsGrid cats={cats} />

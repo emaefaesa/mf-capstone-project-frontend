@@ -55,40 +55,7 @@ const CatsSinglePage = () => {
         setEditCatData({ ...editCatData, [name]: value })
     }
 
-    /*  useEffect(() => {
-         console.log(editCatData)
-     }, [editCatData])
-  */
 
-    /*  const handleSubmit = async (e) => {
- 
-         e.preventDefault()
-         const updatedCat = await catsService.editCat(id, editCatData)
-         console.log("cat updated", updatedCat)
-         try {
-         } catch (error) {
-             console.log("Error!", error)
-         }
-     } */
-
-    /* 
-        const handleSubmit = async (e) => {
-            e.preventDefault()
-            const updatedCat = await catsService.editCat(
-                id,
-                editCatData
-            )
-            console.log("UPDATED!", updatedCat)
-    
-            setShowModal(false)
-            setCat(updatedCat)
-            try {
-            } catch (error) {
-                console.log("Error =>", error)
-            }
-        }
-    
-     */
 
 
     const handleSubmit = async (e) => {
@@ -100,7 +67,6 @@ const CatsSinglePage = () => {
             setCat(updatedCat);
         } catch (error) {
             console.log("Error =>", error);
-            // Aquí puedes agregar lógica adicional para manejar el error, por ejemplo, mostrar un mensaje al usuario
         }
     };
 
@@ -108,18 +74,6 @@ const CatsSinglePage = () => {
 
     return (
 
-        /*   <FormPageLayout backgroundImage={cat.image}>
-              <CatsDetails onOpen={onOpen} catsDetails={CAT_DETAILS} />
-              {isOpen && <Modal isOpen={isOpen} onClose={onClose}>
-                  <CustomForm
-                      options={CAT_OPTIONS}
-                      onChange={handleChange}
-                      onSubmit={handleSubmit}
-                      title={"Edit your Cat"}
-                  />
-              </Modal>}
-          </FormPageLayout>
-   */
 
 
         <FormPageLayout backgroundImage={cat.image}>
