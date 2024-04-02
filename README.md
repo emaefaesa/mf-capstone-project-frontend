@@ -1,7 +1,7 @@
 # CADDS!😺 Building (and assimilating) my first MERN app! (Mongo, Express, React.JS, Node)
 
-Ok, ok... CADDS is is a MERN app that displays some of the coolest restaurants around the world and allows
-experienced users to create more restaurants and display them on the web.
+Ok, ok... CADDS is is a MERN app that displays some...
+
 
      /\_/\
     ( o.o )
